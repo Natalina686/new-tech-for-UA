@@ -65,77 +65,108 @@ body {
   display: block;
 }
 
-.first {
-  grid-area: first;
-}
-.boy {
-  grid-area: boy;
-}
-.orange {
-  grid-area: oorange;
-}
-
 .grid-container {
   display: grid;
-  /* height: 2532px; */
-  align-content: space-evenly;
+  grid-template-rows: repeat(auto-fit, minmax(360px, 1fr));
   grid-template-areas:
     "first boy"
-    "oorange second"
-    "third girl sixth"
-    "forth girls fifth couple";
-
-  background-color: #c0dcf3;
-  padding: 10px;
+    "oorange second";
 }
 
-.grid-container > div {
+.grid-container-a {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-areas: "third girl sixth";
+}
+
+.grid-container-b {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-areas: "forth girls fifth couple";
+}
+
+.grid-container > div,
+.grid-container-a > div,
+.grid-container-b > div {
   background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
+  text-align: left;
   padding: 20px 0;
   font-size: 30px;
 }
 
 .btn-invitation {
+  width: 213px;
+  height: 55px;
   background-color: blue;
+  border: none;
+  color: azure;
+  border-radius: 20px;
+}
+
+.first {
+  height: 820px;
+  margin-left: 20px;
+}
+
+.second {
+  height: 820px;
+  margin-left: 20px;
+}
+
+.third,
+.sixth,
+.forth,
+.fifth {
+  height: 445px;
+  margin-left: 20px;
+}
+
+.special {
+  font-size: 16px;
+}
+
+.main {
+  font-weight: 700;
 }
 
 .boy {
   background-image: url(/images/boy.png);
-  /* width: 100%;
-  height: 820px; */
+  /* grid-column: span 2; */
+  /* width: 100%; */
+  height: 820px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .oorange {
   background-image: url(/images/orange.png);
-  /* width: 100%;
-  height: 820px; */
+  /* grid-column: span 3; */
+  width: 100%;
+  height: 820px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .girl {
   background-image: url(/images/girl.png);
-  /* width: 100%;
-  height: 820px; */
+  width: 360px;
+  height: 445px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .girls {
   background-image: url(/images/girls.png);
-  /* width: 100%;
-  height: 820px; */
+  width: 360px;
+  height: 445px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .couple {
   background-image: url(/images/couple.png);
-  /* width: 100%;
-  height: 820px; */
+  width: 360px;
+  height: 445px;
   background-size: cover;
   background-repeat: no-repeat;
 }
